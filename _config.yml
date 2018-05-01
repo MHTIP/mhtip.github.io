@@ -10,7 +10,7 @@ description: >
 baseurl: /
 
 # social links
-github_username:  mhtip/
+github_username:  mhtip
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
