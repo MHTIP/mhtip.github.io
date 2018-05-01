@@ -1,12 +1,13 @@
 title: MHTIP Project
 author: Ethan Nelson
-#email: 
+email: ethan.nelson@aos.wisc.edu
 description: > 
   This site is home to the 
   Meridional Heat Transport Intercomparison Project, aimed
-  at documenting, understanding, and improving the transport
-  of heat in the Earth system meridionally. Data, methods,
-  and images are available to replicate our analysis.
+  at documenting, understanding, and improving representation of
+  the transport of heat in the Earth system. Data, methods,
+  and images are available to replicate the analysis.
+baseurl: /
 
 # social links
 github_username:  mhtip/
