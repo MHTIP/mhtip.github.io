@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Full Dataset Fluxes
+title: Full Dataset Flux Imbalances
 ---
 
 <style>
@@ -71,17 +71,25 @@ products = [['n_net_toa_all', 'n_net_toa_clr'], ['n_net_sfc_all', 'n_net_sfc_clr
 function updateImages() {
   var datasetmenu = document.getElementById('datasetmenu');
   var newdataset = datasetmenu.value;
+  var hashdataset = window.location.hash;
+  if ((dataset == '') && (hashdataset != '')) {
+    newdataset = hashdataset.split('=')[1];
+    console.log(newdataset);
+  }
   if (dataset != newdataset) {
+    // history.replaceState(undefined, undefined, '#dataset=' + newdataset);
+    window.location.hash = 'dataset='+newdataset;
     for (i = 1; i < 3; i++) {
       image = document.getElementById('1-' + i);
-      image.src = '/img/spatial/' + newdataset + '_' + products[0][i-1] + '.png';
+      image.src = '{{ site.baseurl }}' + '/img/spatial/' + newdataset + '_' + products[0][i-1] + '.png';
     }
     for (i = 2; i < 4; i++) {
       for (j = 1; j < 5; j++) {
         image = document.getElementById(i + '-' + j);
-        image.src = '/img/spatial/' + newdataset + '_' + products[i-1][j-1] + '.png';
+        image.src = '{{ site.baseurl }}' + '/img/spatial/' + newdataset + '_' + products[i-1][j-1] + '.png';
       }
     }
+    dataset = newdataset;
   }
 }
 

@@ -60,8 +60,8 @@ function updateImages() {
   var rightsidemenu = document.getElementById('rightproductmenu');
   var rightdatasetmenu = document.getElementById('rightdatasetmenu');
 
-  var newleftimage = '/img/spatial/' + leftdatasetmenu.value + '_' + leftproductmenu.value + '.png';
-  var newrightimage = '/img/spatial/' + rightdatasetmenu.value + '_' + rightproductmenu.value + '.png';
+  var newleftimage = '{{ site.baseurl }}' + '/img/spatial/' + leftdatasetmenu.value + '_' + leftproductmenu.value + '.png';
+  var newrightimage = '{{ site.baseurl }}' + '/img/spatial/' + rightdatasetmenu.value + '_' + rightproductmenu.value + '.png';
 
   if (leftimage != newleftimage) {
     var leftimg = document.getElementById('leftimg');
